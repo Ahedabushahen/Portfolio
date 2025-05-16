@@ -8,7 +8,7 @@ const Projects = () => {
 
   useEffect(() => {
     // Fetching data from GitHub API
-    fetch('https://api.github.com/users/Ahedabushahen/repos')
+    fetch('https://github.com/Ahedabushahen?tab=repositories')
       .then(res => res.json())
       .then(data => setProjects(data))
       .catch(err => console.error('Error fetching GitHub projects:', err));
