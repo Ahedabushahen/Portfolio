@@ -11,7 +11,7 @@ import Home from './Pages/Portfolio/Portfolio';
 import Contact from './Pages/Contact/Contact';
 import Admin from './Pages/Admin/Admin';
 
-import { AppProvider } from './context/AppContext';
+import { AppProvider } from './AppContext';
 
 function App() {
   return (
