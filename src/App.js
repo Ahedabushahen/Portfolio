@@ -2,9 +2,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from '../Header';
-import Menu from '../Menu';
-import Footer from '../Footer';
+import Header from './Header';
+import Menu from './Menu';
+import Footer from './Footer';
 
 import Home from './Pages/Portfolio/Portfolio';
 
