@@ -2,14 +2,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Header from './components/Header';
-import Menu from './components/Menu';
-import Footer from './components/Footer';
+import Header from '../Header';
+import Menu from '../Menu';
+import Footer from '../Footer';
 
-import Home from './components/Home';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
-import Admin from './components/Admin';
+import Home from './Pages/Portfolio/Portfolio';
+
+import Contact from './Pages/Contact/Contact';
+import Admin from './Pages/Admin/Admin';
 
 import { AppProvider } from './context/AppContext';
 
