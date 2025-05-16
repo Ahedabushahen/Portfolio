@@ -1,6 +1,7 @@
 // src/Pages/projects/Projects.js
 import React, { useEffect, useState } from 'react';
-import './Projects.css'; // Import your CSS file for styling
+import './MyProjects.css';
+
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
