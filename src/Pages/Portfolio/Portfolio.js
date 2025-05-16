@@ -1,6 +1,6 @@
 import React from 'react';
 import './Portfolio.css';
-import profile from '../../assets/profile.png'; // Make sure to add a profile image in /assets
+import profile from '../../assets/profile.jpg'; // Make sure to add a profile image in /assets
 
 useEffect(() => {
   fetch('http://localhost:5000/api/projects')
