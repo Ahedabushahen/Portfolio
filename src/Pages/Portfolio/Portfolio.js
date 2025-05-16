@@ -8,7 +8,9 @@ const Portfolio = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/api/projects')
+    const apiUrl = `${process.env.REACT_APP_API_BASE_URL}/api/projects`;
+
+    fetch(apiUrl)
       .then(res => res.json())
       .then(data => setProjects(data))
       .catch(err => console.error('Failed to fetch projects:', err));
@@ -30,13 +32,13 @@ const Portfolio = () => {
         </div>
       </div>
 
-      {/* Optional: Render project list if needed */}
+      {/* Render project list */}
       {projects.length > 0 && (
         <div className="projects-section">
           <h2>Projects</h2>
           <ul>
             {projects.map((project, index) => (
-              <li key={index}>{project.name}</li>
+              <li key={index}>{project.title}</li>
             ))}
           </ul>
         </div>
@@ -46,6 +48,3 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
-
-// This code defines a React component for a personal portfolio page.
-// It includes an introduction section with a profile image and a brief description.
