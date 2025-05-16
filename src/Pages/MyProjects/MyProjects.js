@@ -7,18 +7,10 @@ const Projects = () => {
     {
       id: 1,
       name: "Doctor-Appointment-Management-System",
-      description: "nwsnb5 bmin 5hn35 popup",
+      description: "Appointment Management System that allows patients to book appointments with doctors.",
       language: "PHP",
       stars: 2,
-      html_url: "#" // Replace with actual URL
-    },
-    {
-      id: 2,
-      name: "FULLSTACKPROJECT",
-      description: "",
-      language: "HTML",
-      stars: 1,
-      html_url: "#" // Replace with actual URL
+      html_url: "https://github.com/Ahedabushahen/Doctor-Appointment-Management-System" 
     },
     {
       id: 3,
@@ -26,15 +18,15 @@ const Projects = () => {
       description: "shopping web site",
       language: "TypeScript",
       stars: 1,
-      html_url: "#" // Replace with actual URL
+      html_url: "https://github.com/Ahedabushahen/Shopping-Cart" 
     },
     {
       id: 4,
       name: "Portfolio",
-      description: "",
+      description: "Who is Ahed Abu Shahen",
       language: "JavaScript",
       stars: 0,
-      html_url: "#" // Replace with actual URL
+      html_url: "https://github.com/Ahedabushahen/Portfolio" 
     }
   ];
 
