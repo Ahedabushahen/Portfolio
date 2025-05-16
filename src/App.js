@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Projects from './Pages/MyProjects/MyProjects'; 
+import MyProjects from './Pages/MyProjects/MyProjects'; 
 
 import Header from './Header';
 import Menu from './Menu';
@@ -26,7 +26,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/MyProjects" element={<MyProjects />} />
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<Admin />} />
