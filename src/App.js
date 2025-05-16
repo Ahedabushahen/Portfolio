@@ -10,8 +10,9 @@ import Home from './Pages/Portfolio/Portfolio';
 
 import Contact from './Pages/Contact/Contact';
 import Admin from './Pages/Admin/Admin';
-
+import About from './Pages/About/About';
 import { AppProvider } from './AppContext';
+import Skills from './Pages/Skills/Skills';
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
         <div className="container my-4">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/admin" element={<Admin />} />
           </Routes>
