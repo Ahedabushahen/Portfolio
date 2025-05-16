@@ -54,3 +54,6 @@ const Projects = () => {
 };
 
 export default Projects;
+
+// This code defines a React component that displays a list of projects.
+// Each project has a name, description, programming language, star count, and a link to its GitHub repository.

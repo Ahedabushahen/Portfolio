@@ -11,3 +11,5 @@ const Header = () => (
 );
 
 export default Header;
+// This code defines a simple header component using React Bootstrap.
+// The header contains a dark-themed navigation bar with the title "My Portfolio".

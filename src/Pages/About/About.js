@@ -33,3 +33,6 @@ const About = () => {
 };
 
 export default About;
+
+// This code defines a React component that displays an "About Me" section.
+// It includes a brief introduction, education details, career goals, and skills.

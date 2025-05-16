@@ -63,5 +63,5 @@ const Admin = () => {
 };
 
 export default Admin;
-// Admin.css
-
+// This code defines a React component for an admin login page.
+// It allows an admin to log in with a specific email and password.

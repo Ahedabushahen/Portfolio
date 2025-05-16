@@ -12,3 +12,5 @@ export const AppProvider = ({ children }) => {
     </AppContext.Provider>
   );
 };
+// This code defines a context provider for a React application.
+// It creates a context using createContext and provides a state variable 'user' with a default value of "Guest".

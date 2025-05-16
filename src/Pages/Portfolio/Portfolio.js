@@ -46,3 +46,6 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+
+// This code defines a React component for a personal portfolio page.
+// It includes an introduction section with a profile image and a brief description.

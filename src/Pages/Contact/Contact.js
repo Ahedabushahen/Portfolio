@@ -53,3 +53,5 @@ const Contact = () => {
 };
 
 export default Contact;
+// This code defines a React component for a contact form.
+// It allows users to submit their name, email, and message.  

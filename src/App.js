@@ -15,6 +15,8 @@ import Admin from './Pages/Admin/Admin';
 import About from './Pages/About/About';
 import { AppProvider } from './AppContext';
 import Skills from './Pages/Skills/Skills';
+// import './App.css'; // Import your CSS file for styling
+
 
 function App() {
   return (
@@ -38,4 +40,8 @@ function App() {
   );
 }
 
+// export default App;
 export default App;
+// This code sets up a React application with routing using React Router.
+// It includes a header, menu, and footer, and defines routes for different pages like Home, About, Projects, Skills, Contact, and Admin.
+// The AppProvider component is used to provide context to the application.
