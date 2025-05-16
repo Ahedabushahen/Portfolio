@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Projects from '../Pages/Projects/Projects'; 
+import Projects from './Pages/projects/Projects'; 
 
 import Header from './Header';
 import Menu from './Menu';
