@@ -1,67 +1,49 @@
-import React, { useState, useEffect } from 'react';
-import './Admin.css';
+// Admin/Admin.js
+import React, { useState } from 'react';
+import '../Admin/Admin.css';
+import MyProjects from '../MyProjects/MyProjects';
+import Skills from '../Skills/Skills';
+import About from '../About/About';
+import Portfolio from '../Portfolio/Portfolio';
+import Contact from '../Contact/Contact';
 
 const Admin = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [messages, setMessages] = useState([]);
+  const [activeTab, setActiveTab] = useState('projects');
 
-  useEffect(() => {
-    const storedMessages = JSON.parse(localStorage.getItem('contactMessages')) || [];
-    setMessages(storedMessages);
-  }, [isAuthenticated]);
-
-  const handleLogin = (e) => {
-    e.preventDefault();
-    if (email === 'admin@gmail.com' && password === '123456') {
-      setIsAuthenticated(true);
-    } else {
-      alert('Invalid credentials!');
+  const renderSection = () => {
+    switch (activeTab) {
+      case 'projects':
+        return <MyProjects adminMode={true} />;
+      case 'skills':
+        return <Skills adminMode={true} />;
+      case 'about':
+        return <About adminMode={true} />;
+      case 'home':
+        return <Portfolio adminMode={true} />;
+      case 'contact':
+        return <Contact adminMode={true} />;
+      default:
+        return <MyProjects adminMode={true} />;
     }
   };
 
   return (
-    <div className="admin-container">
-      {!isAuthenticated ? (
-        <form className="admin-login-form" onSubmit={handleLogin}>
-          <h2>Admin Login</h2>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit">Login</button>
-        </form>
-      ) : (
-        <div className="admin-dashboard">
-          <h2>📨 Submitted Contact Messages</h2>
-          {messages.length === 0 ? (
-            <p>No messages yet.</p>
-          ) : (
-            <ul>
-              {messages.map((msg, idx) => (
-                <li key={idx}>
-                  <strong>{msg.name}</strong> ({msg.email}): {msg.message}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      )}
+    <div className="admin-dashboard">
+      <aside className="admin-sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+          <li onClick={() => setActiveTab('projects')}>Manage Projects</li>
+          <li onClick={() => setActiveTab('skills')}>Manage Skills</li>
+          <li onClick={() => setActiveTab('about')}>Edit About Me</li>
+          <li onClick={() => setActiveTab('home')}>Edit Home Page</li>
+          <li onClick={() => setActiveTab('contact')}>Contact Messages</li>
+        </ul>
+      </aside>
+      <main className="admin-content">
+        {renderSection()}
+      </main>
     </div>
   );
 };
 
 export default Admin;
-// This code defines a React component for an admin login page.
-// It allows an admin to log in with a specific email and password.
